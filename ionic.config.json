@@ -1,0 +1,7 @@
+{
+  "name": "MamaSiaga",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
