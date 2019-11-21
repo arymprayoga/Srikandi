@@ -222,6 +222,8 @@ export class HomePage {
       this.peringatan = 1;
     }
 
+
+
     //perhitungan pertanyaan 9
     if (this.p9 == "a") {
       this.hasil9 = 8;
