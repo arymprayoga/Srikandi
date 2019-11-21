@@ -1,0 +1,176 @@
+<!--
+  Generated template for the ModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar transparent class="header-style-2">
+    <p class="title-style" text-center>Hasil Kuisioner</p>
+    <ion-buttons end>
+      <button ion-button (click)="closeModal()">
+        <p style="color: white;">Keluar</p>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="main-layer" padding>
+    <div *ngIf="hasil1">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col col-8>
+            <img src="assets/imgs/task.png">
+          </ion-col>
+          <ion-col col-2></ion-col>
+        </ion-row>
+      </ion-grid>
+      <p text-center><b>Kehamilan Resiko Rendah</b></p>
+      <p text-justify>Anda termasuk kategori kehamilan Resiko Rendah!
+        Anda bisa melakukan pemeriksaan kehamilan berkala serta persalinan dibantu Bidan di puskesmas terdekat.
+        Tetap siaga menyiapkan rujukan dari Puskesmas , asuransi kesehatan yang dimiliki ya, Mama <br><br>
+        Bagi Mama usia kehamilan trimester 1&2, jangan lupa untuk melakukan pemeriksaan dan isi kuesioner ini di
+        trimester berikutnya ya…
+      </p>
+    </div>
+    <div *ngIf="hasil2">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col col-8>
+            <img src="assets/imgs/dokter1.png">
+          </ion-col>
+          <ion-col col-2></ion-col>
+        </ion-row>
+      </ion-grid>
+      <p text-center><b>Kehamilan Resiko Tinggi</b></p>
+      <p text-justify>Anda termasuk kategori Kehamilan Resiko Tinggi!
+        Tapi jangan khawatir, pemeriksaan kehamilan dan persalinan bisa dibantu Bidan atau dengan didampingi
+        dokter di Polindes atau Puskesmas terdekat dan bersiaga menyiapkan rujukan dari Puskesmas terdekat dan
+        asuransi kesehatan yang dimiliki <br><br>
+        Bagi Mama usia kehamilan trimester 1&2, jangan lupa untuk melakukan pemeriksaan dan isi kuesioner ini di
+        trimester berikutnya ya…
+
+      </p>
+    </div>
+    <div *ngIf="hasil3">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col col-8>
+            <img src="assets/imgs/ambulan.png">
+          </ion-col>
+          <ion-col col-2></ion-col>
+        </ion-row>
+      </ion-grid>
+      <p text-center><b>Kehamilan Resiko Sangat Tinggi</b></p>
+      <p text-justify>Anda termasuk Kategori Kehamilan Resiko Sangat Tinggi!
+        Wajib pada pemeriksaan kehamilan berkala dan persalinan dibantu oleh dokter atau dokter spesialis dan
+        melakukan persalinan di rumah sakit. Tetap jadi Mama Siaga dengan menyiapkan rujukan ke rumah sakit
+        terdekat dan menyiapkan asuransi kesehatan yang dimiliki <br><br>
+        Bagi Mama usia kehamilan trimester 1&2, jangan lupa untuk melakukan pemeriksaan dan isi kuesioner ini di
+        trimester berikutnya ya…
+      </p>
+    </div>
+  </div>
+  <br>
+  <div class="main-layer" padding>
+    <p text-justify>
+      <b>Butuh konsultasi singkat atau ada pertanyaan mengenai kehamilan? Bisa menghubungi kontak bidan terdekat berikut
+        ini:</b>
+    </p>
+    <accordion title="Wilayah tersedia: Dampit, Kabupaten Malang ">
+      <ion-list class="list-about">
+        <!-- bidan 1 -->
+        <ion-item>
+          <ion-icon name="call" item-start class="icon-about"></ion-icon>
+          <p class="nama-bidan">Bidan Ari Suriyani</p>
+          <p text-wrap>Jln Puntodewo RT 08/14 Dampit</p>
+          <a href="whatsapp://send?text=&phone=6285646426111">+6285646426111</a>
+        </ion-item>
+        <!-- bidan 2 -->
+        <ion-item>
+          <ion-icon name="call" item-start class="icon-about"></ion-icon>
+          <p class="nama-bidan">Bidan Anis R.</p>
+          <p text-wrap>Srimulyo 03/03</p>
+          <a href="whatsapp://send?text=&phone=6281252460959">+6281252460959</a>
+        </ion-item>
+        <!-- bidan 3 -->
+        <ion-item>
+          <ion-icon name="call" item-start class="icon-about"></ion-icon>
+          <p class="nama-bidan">Bidan Sulikah </p>
+          <p text-wrap>Ds Rembun 2/1</p>
+          <a href="whatsapp://send?text=&phone=6281233157049">+6281233157049</a>
+        </ion-item>
+        <!-- bidan 4 -->
+        <ion-item>
+          <ion-icon name="call" item-start class="icon-about"></ion-icon>
+          <p class="nama-bidan">Bidan Esa R.</p>
+          <p text-wrap>Srimulyo RT 10/ RW 06</p>
+          <a href="whatsapp://send?text=&phone=6285230804888">+6285230804888</a>
+        </ion-item>
+        <!-- bidan 5 -->
+        <ion-item>
+          <ion-icon name="call" item-start class="icon-about"></ion-icon>
+          <p class="nama-bidan">Bidan Eni J.</p>
+          <p text-wrap>Krajan 10/1 Srimulyo</p>
+          <a href="whatsapp://send?text=&phone=6285100220424">+6285100220424</a>
+        </ion-item>
+        <!-- bidan 6 -->
+        <ion-item>
+          <ion-icon name="call" item-start class="icon-about"></ion-icon>
+          <p class="nama-bidan">Bidan Faiz</p>
+          <p text-wrap>Dusun Sawur RT 5/1, Sukodono</p>
+          <a href="whatsapp://send?text=&phone=6281230259324">+6281230259324</a>
+        </ion-item>
+        <!-- bidan 7 -->
+        <ion-item>
+          <ion-icon name="call" item-start class="icon-about"></ion-icon>
+          <p class="nama-bidan">Bidan Dian Eka</p>
+          <p text-wrap>Polindes Bumirejo. Purwodadi RT1/11 Bumirejo</p>
+          <a href="whatsapp://send?text=&phone=6281230080369">+6281230080369</a>
+        </ion-item>
+        <!-- bidan 8 -->
+        <ion-item>
+          <ion-icon name="call" item-start class="icon-about"></ion-icon>
+          <p class="nama-bidan">Bidan Hening Marhaeni</p>
+          <p text-wrap>Jln Mataram RT 3/ 4, Dampit</p>
+          <a href="whatsapp://send?text=&phone=6281217182210">+6281217182210</a>
+        </ion-item>
+        <!-- bidan 9 -->
+        <ion-item>
+          <ion-icon name="call" item-start class="icon-about"></ion-icon>
+          <p class="nama-bidan">Bidan Rita</p>
+          <p text-wrap>Polindes Amadanom Dsn Banjarpatoman RT 7/4 , Ds Amadanom</p>
+          <a href="whatsapp://send?text=&phone=6281230080363">+6281230080363</a>
+        </ion-item>
+        <!-- bidan 10 -->
+        <ion-item>
+          <ion-icon name="call" item-start class="icon-about"></ion-icon>
+          <p class="nama-bidan">Bidan Tri S.</p>
+          <p text-wrap>Polindes Baturetno. Dusun Panggung Rejo TR 20/ RW 5, Desa Baturetno</p>
+          <a href="whatsapp://send?text=&phone=628125297640">+628125297640</a>
+        </ion-item>
+        <!-- bidan 11 -->
+        <ion-item>
+          <ion-icon name="call" item-start class="icon-about"></ion-icon>
+          <p class="nama-bidan">Bidan Dita</p>
+          <p text-wrap>Puskesmas Dampit. Jl. Semeru Sel. No.4, Dampit, Malang.</p>
+          <a href="whatsapp://send?text=&phone=6282231370835">+6282231370835</a>
+        </ion-item>
+        <!-- bidan 12 -->
+        <ion-item>
+          <ion-icon name="call" item-start class="icon-about"></ion-icon>
+          <p class="nama-bidan">Bidan Isa</p>
+          <p text-wrap>Puskesmas Dampit. Jl. Semeru Sel. No.4, Dampit, Malang.</p>
+          <a href="whatsapp://send?text=&phone=6281235857703">+6281235857703</a>
+        </ion-item>
+      </ion-list>
+    </accordion>
+  </div>
+</ion-content>

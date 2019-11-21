@@ -1,11 +1,117 @@
+<!--
+  Generated template for the AboutPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
+  <ion-navbar transparent class="header-style-2">
+    <p class="title-style-about" text-center>About Us</p>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
 
+<ion-content padding>
+  <div class="main-layer">
+    <ion-grid>
+      <ion-row class="rowz">
+        <ion-col col-12>
+          <p class="isi-about">
+            <strong class="judul-about">SRIKANDI (Deteksi Resiko Kehamilan Mandiri) </strong>merupakan aplikasi untuk
+            membantu masyarakat terutama ibu hamil dan tenaga kesehatan dalam mendeteksi tinggi atau rendahnya
+            resiko suatu kehamilan secara mandiri dengan bantuan mengisi kuesioner dalam aplikasi non berbayar.
+            Dalam klasifikasinya akan dibagi menjadi resiko kehamilan rendah, tinggi dan sangat tinggi, yang dimana
+            pada aplikasi akan diberi solusi awal berupa arahan untuk memeriksakan kehamilan. Adapun aplikasi ini
+            dibuat berdasarkan kaidah dari skor kehamilan Pudji Rochjati sehingga hasilnya cukup valid dan bisa
+            dipercaya.</p>
+        </ion-col>
+      </ion-row>
+      <ion-row class="rowz">
+        <ion-col col-12>
+          <p class="isi-about">
+            Aplikasi ini dikembangkan oleh Dokter Muda Septha, Dokter Muda Astrid,
+            Dokter Muda Faras, Dokter Muda Dzulfikar dan Dokter Muda Mellisa yang bekerja sama dengan pihak
+            Puskesmas Dampit di Kabupaten Malang, Jawa Timur, Indonesia dan dibantu oleh pihak Pre-Grad Project
+            dan Slathem Studio.
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <br>
+  <!-- <div class="panel-putihs">
+    <p class="abouuut">Contact Us</p>
+  </div> -->
+  <ion-list class="list-about">
+    <ion-item>
+      <p class="text-a" text-center>Puskesmas Dampit Kabupaten Malang</p>
+    </ion-item>
+    <!-- <ion-item>
+      <ion-icon name="custom-line" item-start class="icon-about"></ion-icon>
+      <h3>Akun Line</h3>
+      <p>@ubi8348o</p>
+    </ion-item> -->
+    <!-- <ion-item>
+      <ion-icon name="custom-instagram" item-start class="icon-about"></ion-icon>
+      <h3>Akun Instagram</h3>
+      <p>labekisfebub</p>
+    </ion-item> -->
+    <ion-item ng-href="tel:0341896309">
+        <ion-icon name="call" item-start class="icon-about"></ion-icon>
+        <a href="tel:0341896309">0341-896309</a>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="home" item-start class="icon-about"></ion-icon>
+      <!-- <h3>Alamat</h3> -->
+      <p text-wrap>Jl. Semeru Sel. No.4, Dampit, Malang, Jawa Timur 65181</p>
+    </ion-item>
+  </ion-list>
+
+  <div class="panel-putihs">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <p class="developedby">Developed By :</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+            <img src="assets/imgs/LogoPuskesmas.png">
+        </ion-col>
+        <ion-col>
+            <img src="assets/imgs/malang.png">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col col-3>
+            <!-- <img src="assets/imgs/malang.png"> -->
+          </ion-col>
+          <ion-col col-6>
+            <img src="assets/imgs/slathem.png">
+          </ion-col>
+          <ion-icon col-3>
+          </ion-icon>
+        </ion-row>
+    </ion-grid>
+  </div>
+  <br>
+  <div class="panel-putihs" padding>
+    <p class="freepik-desc">Icon Made by
+      <a (click)="openInAppBrowser('https://freepik.com')">Freepik</a> from
+      <a (click)="openInAppBrowser('https://flaticon.com')">www.flaticon.com</a>
+    </p>
+  </div>
+  <div class="panel-putihs">
+    <p class="referensi">Referensi</p>
+    <ul>
+      <li>Poedji Rochyati, Dr, dr, SpOG(K). Skrining antenatal Pada ibu hamil, Pengenalan faktor Risiko Deteksi Dini
+        Ibu Hamil Risiko Tinggi, Cetakan-1, Airlangga University Press,Surabaya, 2003, hal 127-128</li>
+      <li>Buku Kesehatan Ibu dan Anak , Departemen Kesehatan Republik Indonesia, 2006</li>
+      <li>Prawihardjo, S., 2009. Ilmu Kebidanan. Edisi 4. Cetakan 2. Jakarta : Yayasan Bina Pustaka Sarwono
+        Prawihardjo. </li>
+      <li>Rochjati P. Bunga rampai obstetri dan ginekologi sosial: sistem rujukan dalam pelayanan kesehatan reproduksi.
+        Jakarta: Yayasan Bina Pustaka Sarwono Prawirohardjo; 2005</li>
+    </ul>
+    <br>
+  </div>
 </ion-content>

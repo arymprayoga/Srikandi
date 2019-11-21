@@ -1,17 +1,434 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+  <ion-toolbar transparent class="header-style-2">
+    <p class="title-style-home" text-center>
+      <ion-icon name="home" color="light"></ion-icon>
+    </p>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more" color="light"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar transparent class="header-style">
+    <ion-row>
+      <ion-col text-center>
+        <ion-buttons>
+          <button ion-button (click)="klik1()" [ngStyle]="{'border-bottom': '3px', 'border-style': 'solid', 'border-bottom-color': buttonColor1}">
+            <p class="trimester">1 - 3 Bulan</p>
+          </button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col text-center>
+        <ion-buttons>
+          <button ion-button (click)="klik2()" [ngStyle]="{'border-bottom': '3px', 'border-style': 'solid', 'border-bottom-color': buttonColor2}">
+            <p class="trimester">4 - 6 Bulan</p>
+          </button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col text-center>
+        <ion-buttons>
+          <button center ion-button (click)="klik3()" [ngStyle]="{'border-bottom': '3px', 'border-style': 'solid', 'border-bottom-color': buttonColor3}">
+            <p class="trimester">7 - 9 BULAN</p>
+          </button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content padding class="content">
+  <div class="main-layer">
+    <!-- <ion-card>
+    <ion-card-content>
+      <p>
+        Apakah Anda Mengalami Muntah - Muntah?
+      </p>
+    </ion-card-content>
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button color="danger" block>
+          Ya
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button color="danger" block>
+          Tidak
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card> -->
+
+    <!-- <ion-card>
+    <ion-card-content>
+      <p>
+        Berapakah Usia Kehamilan Anda?
+      </p>
+    </ion-card-content>
+    <ion-list radio-group [(ngModel)]="p1">
+      <ion-item>
+        <ion-label>Trimester 1 (0-3 bulan)</ion-label>
+        <ion-radio value="a"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Trimester 2 (4-6 bulan)</ion-label>
+        <ion-radio value="b"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Trimester 3 (7-9 bulan)</ion-label>
+        <ion-radio value="c"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </ion-card> -->
+    <div class="main-content" no-padding>
+      <ion-card class="card">
+        <ion-card-content class="question">
+          Berapakah <b>Usia</b> Anda Saat Ini?
+        </ion-card-content>
+        <ion-list radio-group [(ngModel)]="p2">
+          <ion-item class="questionOption">
+            <ion-label>Dibawah 17 Tahun</ion-label>
+            <ion-radio value="a"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label>17 - 34 Tahun</ion-label>
+            <ion-radio value="b"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label>Diatas 34 Tahun</ion-label>
+            <ion-radio value="c"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+
+      <!-- <ion-card>
+        <ion-card-content class="question">
+          Sudah Berapa <b>Lama Anda Menikah</b> Dengan Pasangan?
+        </ion-card-content>
+        <ion-list radio-group [(ngModel)]="p3">
+          <ion-item class="questionOption">
+            <ion-label>0 - 3 Tahun</ion-label>
+            <ion-radio value="a"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label>Diatas 3 Tahun</ion-label>
+            <ion-radio value="b"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-card> -->
+
+      <ion-card>
+        <ion-card-content class="question">
+          Apakah Sebelumnya Anda Sudah <b>Pernah Hamil</b>? Jika Iya, Berapakah <b>Jarak Waktu Dari Kehamilan</b> Terakhir (Dalam
+          Tahun)
+        </ion-card-content>
+        <ion-list radio-group [(ngModel)]="p4">
+          <ion-item class="questionOption">
+            <ion-label>Dibawah 2 Tahun</ion-label>
+            <ion-radio value="a"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label>2 - 9 Tahun</ion-label>
+            <ion-radio value="b"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label>Diatas 9 Tahun</ion-label>
+            <ion-radio value="c"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label>Belum Pernah Hamil Sebelumnya</ion-label>
+            <ion-radio value="d"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content class="question">
+          Berapakah <b>Jumlah Total Anak (Kandung)</b> Anda Hingga Saat Ini?
+        </ion-card-content>
+        <ion-list radio-group [(ngModel)]="p5">
+          <ion-item class="questionOption">
+            <ion-label>0 - 3 Anak</ion-label>
+            <ion-radio value="a"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label class="questionOption">Lebih Dari 3 Anak</ion-label>
+            <ion-radio value="b"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content class="question">
+          Berapakah <b>Tinggi Badan</b> Anda Saat Ini?
+        </ion-card-content>
+        <ion-list radio-group [(ngModel)]="p6">
+          <ion-item class="questionOption">
+            <ion-label>Dibawah 146 cm</ion-label>
+            <ion-radio value="a"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label>146 cm Atau Lebih</ion-label>
+            <ion-radio value="b"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content class="question">
+          Apakah Sebelumnya Anda <b>Pernah Mengalami Keguguran</b> Atau Aborsi?
+        </ion-card-content>
+        <ion-list radio-group [(ngModel)]="p7">
+          <ion-item class="questionOption">
+            <ion-label>Ya</ion-label>
+            <ion-radio value="a"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label>Tidak</ion-label>
+            <ion-radio value="b"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content class="question">
+          Apakah Sebelumnya Anda <b>Pernah Melahirkan Disertai
+          Dengan Tindakan Khusus</b> Seperti Dirogoh Uri Atau Dengan Placenta Manual?
+        </ion-card-content>
+        <ion-list radio-group [(ngModel)]="p8">
+          <ion-item class="questionOption">
+            <ion-label>Ya</ion-label>
+            <ion-radio value="a"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label>Tidak</ion-label>
+            <ion-radio value="b"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content class="question">
+          Apakah Sebelumnya Anda Pernah Melakukan <b>Persalinan Dengan Operasi Sesar</b>?
+        </ion-card-content>
+        <ion-list radio-group [(ngModel)]="p9">
+          <ion-item class="questionOption">
+            <ion-label>Ya</ion-label>
+            <ion-radio value="a"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label>Tidak</ion-label>
+            <ion-radio value="b"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content class="question">
+          Apakah Anda <b>Selama Kehamilan Memiliki Penyakit</b> Sebagai Berikut :
+          <p>
+            - Kurang Darah Atau Malaria
+          </p>
+          <p>
+            - TB Paru Atau Gagal Jantung
+          </p>
+          <p>
+            - Kencing Manis
+          </p>
+          <p>
+            - Penyakit Menular Seksual
+          </p>
+          <p>
+            - Tekanan darah tinggi
+          </p>
+          <p>
+            - Penyakit Jantung (tanda bengkak pada muka/tungkai)
+          </p>
+          <p>
+            - Hepatitis
+          </p>
+          <p>
+            - HIV
+          </p>
+        </ion-card-content>
+        <ion-list radio-group [(ngModel)]="p10">
+          <ion-item class="questionOption">
+            <ion-label>Ya, Salah Satunya</ion-label>
+            <ion-radio value="a"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label>2 Penyakit Dari Daftar</ion-label>
+            <ion-radio value="b"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label>3 Penyakit Dari Daftar</ion-label>
+            <ion-radio value="c"></ion-radio>
+          </ion-item>
+          <!-- <ion-item>
+        <ion-label>4 Penyakit Dari Daftar</ion-label>
+        <ion-radio value="d"></ion-radio>
+      </ion-item> -->
+          <ion-item class="questionOption">
+            <ion-label>Tidak Ada</ion-label>
+            <ion-radio value="d"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+
+      <!-- <ion-card>
+    <ion-card-content>
+      <p>
+        Apakah Anda Selama Kehamilan Pernah Mengalami Bengkak
+        Pada Muka/Tungkai Dan Tekanan Darah Tinggi?
+      </p>
+    </ion-card-content>
+    <ion-list radio-group [(ngModel)]="p11">
+      <ion-item>
+        <ion-label>Ya</ion-label>
+        <ion-radio value="a"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Tidak</ion-label>
+        <ion-radio value="b"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </ion-card> -->
+
+      <ion-card>
+        <ion-card-content class="question">
+            Apakah Saat Ini Anda <b>Mengandung Anak Kembar</b>?
+        </ion-card-content>
+        <ion-list radio-group [(ngModel)]="p12">
+          <ion-item class="questionOption">
+            <ion-label>Ya</ion-label>
+            <ion-radio value="a"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label>Tidak</ion-label>
+            <ion-radio value="b"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+
+      <!-- <ion-card>
+    <ion-card-content>
+      <p>
+        Apakah Saat Ini Anda Mengalami Hamil Kembar Air?
+      </p>
+    </ion-card-content>
+    <ion-list radio-group [(ngModel)]="p13">
+      <ion-item>
+        <ion-label>Ya</ion-label>
+        <ion-radio value="a"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Tidak</ion-label>
+        <ion-radio value="b"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </ion-card> -->
+
+      <ion-card>
+        <ion-card-content class="question">
+            Apakah Saat Ini Anda <b>Mengalami Tanda - Tanda Kematian Janin Dalam
+            Rahim</b>? 
+            <p>- Tidak Terasa Gerakan Janin </p>
+            <p>- Perut Terasa Mengecil</p>
+            <p>- Payudara Mengecil</p>
+        </ion-card-content>
+        <ion-list radio-group [(ngModel)]="p14">
+          <ion-item class="questionOption">
+            <ion-label>Ya</ion-label>
+            <ion-radio value="a"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label>Tidak</ion-label>
+            <ion-radio value="b"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+
+      <ion-card *ngIf="trimester">
+        <ion-card-content class="question">
+            Apakah Saat Ini Anda <b>Mengalami Kehamilan Lebih Bulan</b>? (Kehamilan Lebih Dari 42 Minggu)
+        </ion-card-content>
+        <ion-list radio-group [(ngModel)]="p15">
+          <ion-item class="questionOption">
+            <ion-label>Ya</ion-label>
+            <ion-radio value="a"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label>Tidak</ion-label>
+            <ion-radio value="b"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+
+      <ion-card *ngIf="trimester">
+        <ion-card-content class="question">
+            Apakah Pada Saat Ini (Usia Kehamilan 8 - 9 Bulan) <b>Janin Berada Pada Letak Sungsang</b>?
+        </ion-card-content>
+        <ion-list radio-group [(ngModel)]="p16">
+          <ion-item class="questionOption">
+            <ion-label>Ya</ion-label>
+            <ion-radio value="a"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label>Tidak</ion-label>
+            <ion-radio value="b"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+
+      <ion-card *ngIf="trimester">
+        <ion-card-content class="question">
+            Apakah Pada Saat Ini (Usia Kehamilan 8 - 9 Bulan) <b>Janin Berada Pada Letak Lintang</b>?
+        </ion-card-content>
+        <ion-list radio-group [(ngModel)]="p17">
+          <ion-item class="questionOption">
+            <ion-label>Ya</ion-label>
+            <ion-radio value="a"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label>Tidak</ion-label>
+            <ion-radio value="b"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content class="question">
+            Apakah Anda Mengalami <b>Pendarahan Dari Liang Kelamin</b> Pada Kehamilan Ini?
+        </ion-card-content>
+        <ion-list radio-group [(ngModel)]="p18">
+          <ion-item class="questionOption">
+            <ion-label>Ya</ion-label>
+            <ion-radio value="a"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label>Tidak</ion-label>
+            <ion-radio value="b"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-content class="question">
+            Apakah Anda Pernah Mengalami <b>Kejang-Kejang Selama Kehamilan</b> Ini?
+        </ion-card-content>
+        <ion-list radio-group [(ngModel)]="p19">
+          <ion-item class="questionOption">
+            <ion-label>Ya</ion-label>
+            <ion-radio value="a"></ion-radio>
+          </ion-item>
+          <ion-item class="questionOption">
+            <ion-label>Tidak</ion-label>
+            <ion-radio value="b"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+      <div padding>
+        <button ion-button color="pink2" block (click)="hitung()">Hitung</button>
+      </div>
+    </div>
+  </div>
 </ion-content>

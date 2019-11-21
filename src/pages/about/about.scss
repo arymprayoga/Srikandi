@@ -1,3 +1,55 @@
-page-about {
+.title-style-about{
+    font-size: 20px;
+    color: white;
+    font-weight: 800;
+    margin-right: 40px;
+}
 
+.judul-about{
+    font-weight: 900;
+    color: color($colors, primary);
+    font-size: 15px;
+}
+
+.isi-about{
+    text-align: justify;
+}
+
+.panel-putihs{
+    background: rgba(255,255,255,0.8);
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+// .abouuut{
+//     color: color($colors, primary);
+//     font-weight: 900;
+//     font-size: 20px;
+//     padding-bottom: 13px;
+//     padding-top: 13px;
+//     margin-top: 0px;
+//     padding-left: 10px;
+// }
+
+.text-a{
+    color: color($colors, primary);
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.developedby{
+    font-size: 16px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.referensi{
+    text-align: center;
+    font-weight: 900;
+    font-size: 16px;
+    padding-top: 15px;
 }
